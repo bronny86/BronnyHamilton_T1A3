@@ -36,7 +36,7 @@ def eval_attempt(a, s): #a = attempt s = secret word
             if char in s2:
                 res[pos] = '+'
                 a2[pos] = '0'
-                s2.remove(char) $ remove from s2
+                s2.remove(char) #ermove from s2
             else:
                 res[pos] = '_'
         # print the attempt as colored chars
