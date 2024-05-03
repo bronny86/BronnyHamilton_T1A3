@@ -5,14 +5,17 @@ from termcolor import colored
 import nltk
 nltk.download('words')
 
+
 def print_menu():
     print("Let's play Wordle!")
     print("Six chances to guess a five letter word. Type your first guess and then hit enter!\n")
+
 
 def read_random_word():
     with open("words.txt") as f:
         words = f.read().splitlines()
         return random.choice(words).lower()
+
 
 def eval_attempt(a, s):  # a = attempt s = secret word
     res = [' '] * 5  # result as list of chars
@@ -77,4 +80,5 @@ while PLAY_AGAIN != "q":
             break
         elif attempt == 6:
             print(f"Sorry the wordle was.. {word}")
-    PLAY_AGAIN = input("Want to play again? If YES type a new word. If NO type q to exit")
+    PLAY_AGAIN = input(
+        "Want to play again? If YES type a new word. If NO type q to exit")
