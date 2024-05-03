@@ -16,11 +16,11 @@ def read_random_word():
     
 def eval_attempt(a, s): #a = attempt s = secret word
     res = [' '] * 5 #result as list of chars
-    '''encoding for list elements:
-    '*' - char. is correctly placed
-    '+' - char. is in secret word but wrong place
-    '_' char. is not in the secret word
-    '''
+    #'''encoding for list elements:
+    #'*' - char. is correctly placed
+    #'+' - char. is in secret word but wrong place
+    #'_' char. is not in the secret word
+    #'''
 
     s2 = list(s) # copt of s as list of chars
     a2 = list(a) # copy of a as list of chars
