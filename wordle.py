@@ -22,10 +22,38 @@ def eval_attempt(a, s): #a = attempt s = secret word
     '_' char. is not in the secret word
     '''
 
+    s2 = list(s) # copt of s as list of chars
+    a2 = list(a) # copy of a as list of chars
+    # mark '*' chars
+    for pos, char in enumerate(a):
+        if char == s[pos]:
+            res[pos] = '*'
+            a2[pos] = '0' #mark char as 'checked'
+            s2.remove(char) #remove from s2
+        # mark '+', '_' in chars
+    for pos, char in enumerate(a2):
+        if char != '0': #only check chars that are not already checked
+            if char in s2:
+                res[pos] = '+'
+                a2[pos] = '0'
+                s2.remove(char) $ remove from s2
+            else:
+                res[pos] = '_'
+        # print the attempt as colored chars
+    for pos, char in enumerate(a):
+        if res[pos] == '_':
+            print(char, end='')
+        elif res[pos] == '+':
+            print(colored(char, 'yellow'), end="")
+        else: #'*'
+            print(colored(char, 'green'), end="")
+
+
 nltk.data.path.append('/work/words')
 word_list = words.words()
 words_five = [word for word in word_list if len(word) == 5]
 print(len(words_five))
+
 print_menu()
 play_again = " "
 while play_again != "q":
