@@ -68,4 +68,14 @@ while play_again != "q":
         sys.stdout.write('\x1b[1A]')
         sys.stdout.write('\x1b[2K]')
 
-        
+        eval_attempt(guess, word)
+        print()
+
+        if guess == word:
+            print(colored(f"Congrats you got the word in {attempt}", 'red'))
+            break
+        elif attempt == 6:
+            print(f"Sorry the wordle was.. {word}")
+    play_again = input("Want to play again? Type q to exit")
+    
+
