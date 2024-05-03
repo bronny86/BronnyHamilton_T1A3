@@ -77,4 +77,4 @@ while PLAY_AGAIN != "q":
             break
         elif attempt == 6:
             print(f"Sorry the wordle was.. {word}")
-    PLAY_AGAIN = input("Want to play again? If YES type a new five letter word. If NO type q to exit")
+    PLAY_AGAIN = input("Want to play again? If YES type a new word. If NO type q to exit")
