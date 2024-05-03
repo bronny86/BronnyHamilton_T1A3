@@ -13,6 +13,14 @@ def read_random_word():
     with open ("words.txt") as f:
         words = f.read().splitlines()
         return random.choice(words).lower()
+    
+def eval_attempt(a, s): #a = attempt s = secret word
+    res = [' '] * 5 #result as list of chars
+    '''encoding for list elements:
+    '*' - char. is correctly placed
+    '+' - char. is in secret word but wrong place
+    '_' char. is not in the secret word
+    '''
 
 nltk.data.path.append('/work/words')
 word_list = words.words()
