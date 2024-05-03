@@ -57,7 +57,8 @@ print(len(words_five))
 print_menu()
 play_again = " "
 while play_again != "q":
-    word = read_random_word() #using file words.txt for testing
+    word = random.choice(words_five).lower() #using NLTK
+    # word = read_random_word() using file words.txt for testing
     for attempt in range(1, 7):
         guess = input().lower()
         #input validation
@@ -77,5 +78,5 @@ while play_again != "q":
         elif attempt == 6:
             print(f"Sorry the wordle was.. {word}")
     play_again = input("Want to play again? Type q to exit")
-    
+
 
