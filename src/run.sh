@@ -1,25 +1,18 @@
-#! /bin/bash
+#!/bin/bash
 
-# check if python is installed
-python3 --version
+# Make script executable
+chmod +x ./check_python.sh
+chmod +x ./create_venv.sh
+chmod +x ./install_packages.sh
 
-# install venv
-python3 -m pip install --user virtualenv
-# create virtual environment
-python3 -m venv .venv
-# activate virtual environment
-source venv/bin/activate
+# Run python check/install script
+./check_python.sh
 
-# install nltk
-pip install nltk
+# Create vevn
+./create_venv.sh
 
-# install termcolor
-
-pip install termcolor
-
-# make script executable
-chmod +x ./run.sh
+# Install packages
+./install_package.sh
 
 # run game
-./run.sh
 python3 wordle.py
