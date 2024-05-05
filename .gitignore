@@ -1,2 +1,12 @@
-/venv
+.venv/
+venv/
 .venv
+bin/
+.venv/bin/
+venv*
+/.venv/
+.venv
+/venv/
+venv
+.venv*
+*bin*
