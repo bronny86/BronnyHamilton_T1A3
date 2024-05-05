@@ -5,12 +5,12 @@ from termcolor import colored
 import nltk
 nltk.download('words')
 
-
+# Main menu starts when app is opened
 def print_menu():
     print("Let's play Wordle!")
     print("Six chances to guess a five letter word. Type your first guess and then hit enter!\n")
 
-
+#Chooses a secret word
 def read_random_word():
     with open("words.txt") as f:
         words = f.read().splitlines()
@@ -39,7 +39,7 @@ def eval_attempt(a, s):  # a = attempt s = secret word
             if char in s2:
                 res[pos] = '+'
                 a2[pos] = '0'
-                s2.remove(char)  # ermove from s2
+                s2.remove(char)  # remove from s2
             else:
                 res[pos] = '_'
         # print the attempt as colored chars
@@ -51,7 +51,7 @@ def eval_attempt(a, s):  # a = attempt s = secret word
         else:  # '*'
             print(colored(char, 'green'), end="")
 
-
+# Checks word length
 nltk.data.path.append('/work/words')
 word_list = words.words()
 words_five = [word for word in word_list if len(word) == 5]
