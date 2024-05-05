@@ -41,3 +41,28 @@ The run.sh file will check what version of Python the user has, create a virtual
 ***
 
 Once the application has opened, the user types in a five letter English language word to begin the game.
+
+***
+
+## Implementation Plan
+
+Trello board linked above. Screenshot examples:
+
+![Trello board 1](/docs/screenshots/Screenshot%202024-05-05%20at%2010.01.13 PM.png)
+
+![Trello board 2](/docs/screenshots/Screenshot%202024-05-05%20at%2010.01.37 PM.png)
+
+![Trello board 3](/docs/screenshots/Screenshot%202024-05-05%20at%2010.01.59 PM.png)
+
+![Trello board 4](/docs/screenshots/Screenshot%202024-05-05%20at%209.59.41 PM.png)
+
+***
+
+## Flowchart Diagram of App
+
+![Flowchart](/docs/screenshots/flowchart.png)
+
+***
+
+## Features
+
